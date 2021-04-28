@@ -12,7 +12,7 @@ C='\033[36m'
 W='\033[37m'
 # RESET= '\033[0m'
 # 256-colors
-echo -e "\033[38;5;198m HI ROOT" # General Way "\033[38;5;${id}m HELLO ROOT"
+echo -e "\033[38;5;198m  HI Buddy" # General Way "\033[38;5;${id}m HELLO ROOT"
 
 anim=(
       ' 3'
@@ -35,7 +35,7 @@ fi
 echo -e "\n${R}[${O}${R}]${B} Installing Your Tools in ${C}"; #$spini ${C}";
 spin #function call
 
-echo -e "\n${R}[${O}~${R}]${B} Let's Begin.. ${O}      \n
+echo -e "\n${R}[${O}~${R}]${B} Let's Begin.. " $G; #${O}      \n
                                     甆                              ﲎ ﴂ  ﴢ      ﲮ ✔✘      " $G;
 sudo apt update
 echo -e "\n${R}[${O}+${R}]${B} Installing Vim and some of its required things... " $G;
