@@ -35,14 +35,15 @@ fi
 echo -e "\n${R}[${O}${R}]${B} Installing Your Tools in ${C}"; #$spini ${C}";
 spin #function call
 
-echo -e "\n${R}[${O}~${R}]${B} Let's Begin.. ${O}      \n                                             ﲎ ﴂ       ﲮ ✔✘      " $G;
+echo -e "\n${R}[${O}~${R}]${B} Let's Begin.. ${O}      \n
+                                    甆                              ﲎ ﴂ  ﴢ      ﲮ ✔✘      " $G;
 sudo apt update
 echo -e "\n${R}[${O}+${R}]${B} Installing Vim and some of its required things... " $G;
 sudo apt install vim vim-addon-manager vim-syntax-gtk vim-runtime vim-scripts vim-gtk3 vim-asciidoc 1> /dev/null
 
 echo -e "\n${R}[${O}+${R}]${B} Installing Kate (a very awesome and powerful text-editor)... " $G;
 if [ -f /bin/kate ]; then
-	echo -e "\n${C} ✔ ${O} Kate is already installed. " $G; 
+	echo -e "\n${C} ✔ ${O} Kate is already installed. " $G;
 else
    sudo apt install kate -y  1> /dev/null 1> /dev/null
 echo -e "\n${C} ✔ ${O} Kate has been installed. " $G
@@ -50,9 +51,9 @@ fi
 
 echo -e "\n${R}[${O}+${R}]${B} Installing Terminator (a nice terminal emulator)... " $G;
 if [ -f /bin/terminator ]; then
-	echo -e "\n${C} ✔ ${O} Terminator is already installed. " $G; 
+	echo -e "\n${C} ✔ ${O} Terminator is already installed. " $G;
 else
-  sudo apt install terminator -y  1> /dev/null; 
+  sudo apt install terminator -y  1> /dev/null;
 fi
 
 echo -e "\n${R}[${O}+${R}]${B} Do you want to install Zsh Plugins? ${C}(y/n): " $G; sleep 0.5
@@ -82,7 +83,7 @@ echo -e "\n${R}[${O}+${R}]${B} Fetching Linpeas (Linux PrivEsc script).." $G;
 if [ -f ~/linpeas.sh ]; then
 	echo -e "\n${C} ✔ ${O} Linpeas already fetched. " $G; sleep 1
 else
-	wget https://raw.githubusercontent.com/carlospolop/privilege-escalation-awesome-scripts-suite/master/linPEAS/linpeas.sh		
+	wget https://raw.githubusercontent.com/carlospolop/privilege-escalation-awesome-scripts-suite/master/linPEAS/linpeas.sh
 fi
 
 echo -e "\n${R}[${O}+${R}]${B} Installing Nautilus (an awesome file browser) and some extensions... " $G;
@@ -260,11 +261,11 @@ sleep 0.5
 echo -e "\n${R}[${O}+${R}]${B} Installing VirtualBox... " $G;
 sudo apt install virtualbox
 sleep 0.5
- 
+
  echo -e "\n${R}[${O}+${R}]${B} Cleaning... " $G;
  sudo apt autoclean && sudo apt autoremove
  sleep 0.5
- 
+
 echo -e "\n${R}[${O}+${R}]${B} Installing ${C}:" $G;
 echo -e "\n${R}[${O}*${R}]${B} Yersinia (Network vulnerabilities check software)..."
 echo -e "${R}[${O}*${R}]${B} Uniscan (LFI, RFI, and RCE vulnerability scanner)... " $G;
