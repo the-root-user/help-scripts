@@ -1,16 +1,16 @@
-#!/usr/bin/bash
+#!/usr/bin/bash -
 
 #color variables
 Black='\033[30m'
 R='\033[31m'
 BRIGHTRED='\033[31;1m' #16-colors
+# RESET= '\033[0m'
 G='\033[32m'
 O='\033[33m'
 B='\033[34m'
 M='\033[35m'
 C='\033[36m'
 W='\033[37m'
-# RESET= '\033[0m'
 # 256-colors
 echo ""
 echo -e "\033[38;5;198m Hi $USER" # General Way "\033[38;5;${id}m HELLO ROOT"
@@ -39,7 +39,7 @@ spin #function call
 #echo ""
 
 #echo -e "\n{B}[~] Let's Begin.. ${O}      \n
-#      履  ﱮ                  梅 海                  甆                      (heartbeat) (diamond)     ﲎ ﴂ  ﴢ             ﲮ  ✔ ✘         滛 滋  望 歹 摒 敖 " $W;
+#  ﱨ        ﮚ     ﮙ   ﯎ 履  ﱮ                       梅 海                      甆 ﭮ                      (heartbeat) (diamond)     ﲎ ﴂ  ﴢ             ﲮ  ㉿  ✔ ✘         滛 滋  望 歹 摒 敖     " $W;
 sudo apt update
 
 echo -e "\n${B}[+] Do you want to install Zsh Plugins? ${C}(y/n): " $W;   
@@ -53,8 +53,8 @@ read  REPLY;
 					git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.oh-my-zsh/plugins/zsh-syntax-highlighting;
 					git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions;
 					git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/plugins/completions; cd ~
-		 			echo -e "\n{B}[*] Now, installing Theme: p10k-zsh ... " $W;
-		            git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/.oh-my-zsh/themes/powerlevel10k
+					echo -e "\n{B}[*] Now, installing Theme: p10k-zsh ... " $W;
+					git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/.oh-my-zsh/themes/powerlevel10k
 					# Worthy steps
 					#cp .p10k.zsh ~/.p10k.zsh
 					#cp zshrc-modified-omz ~/.zshrc
@@ -88,22 +88,24 @@ read  REPLY;
 					pip3 install search-that-hash
 					echo -e "${B}[*] Hakrawler"$W
 					go get github.com/hakluke/hakrawler
-					echo -e "${B}[*] Pwncat"$W
-					pip install git+https://github.com/calebstewart/pwncat.git
-					echo -e "${B}[*] Xsrfprobe"$W
-					pip3 install xsrfprobe
-					echo -e "${B}[*] Osmedius"$W
-					git clone https://github.com/j3ssie/Osmedeus && cd Osmedeus && ./install && cd ..
 					echo -e "${B}[*] WayBackurls"$W
 					go get github.com/tomnomnom/waybackurls
+					echo -e "${B}[*] Interlace"$W
+					git clone https://github.com/codingo/Interlace.git ~/toolies
+					echo -e "${B}[*] Pwncat"$W
+					pip install git+https://github.com/calebstewart/pwncat.git
+					echo -e "${B}[*] Arjun"$W
+					git clone https://github.com/s0md3v/Arjun.git && cd Arjun && python3 setup.py install && cd ..
+					echo -e "${B}[*] Osmedius"$W
+					git clone https://github.com/j3ssie/Osmedeus && cd Osmedeus && ./install && cd ..
 					# echo -e "${B}[*] Autorecon"$W
 					# git clone https://github.com/Tib3rius/AutoRecon.git && cd AutoRecon && pip3 install -r requirements.txt && cd ..
 					echo -e "${B}[*] Volatility 3"$W
 					git clone https://github.com/volatilityfoundation/volatility3.git && echo -e "${O}[+] Just Cloned, Install Manually."$W
 					echo -e "${B}[*] Rustscan"$W
 					cargo install rustscan
-					echo -e "${B}[*] Arjun"$W
-					git clone https://github.com/s0md3v/Arjun.git && cd Arjun && python3 setup.py install && cd ..
+					echo -e "${B}[*] Xsrfprobe"$W
+					pip3 install xsrfprobe
 					echo -e "\n${B}[*] Want to get SecLists ? ${C}(y/n): "$W;
 					read  REPLY;
 						if [[ "$REPLY" =~ ^[y/Y]$ ]];
@@ -113,14 +115,17 @@ read  REPLY;
 					echo -e "\n${G}[✔] All Installed.\n"
 			  fi
 
-echo -e "\n${B}[+] Installing Diodon(clipboard)..." $W;
-sudo apt install diodon -y 1> /dev/null && echo -e "${G}[✔] Installed\n"
+echo -e "\n${G}[*] Installing..."
+echo -e "${B}[*] lsd (glorious ls)"$W && sudo apt install lsd -y && echo -e "${B}[*] batcat (cat with syntax highlightening and numbering)"$W && sudo apt install batcat -y && echo -e "${B}[*] duf (improved du, df)"$W && sudo apt install duf -y && echo -e "${G}[✔] Installed\n"
 
-echo -e "\n${B}[+] Installing Flameshot..." $W;
-sudo apt install flameshot -y 1> /dev/null && echo -e "${G}[✔] Installed\n"
+# echo -e "\n${B}[+] Installing Diodon(clipboard)..." $W;
+# sudo apt install diodon -y 1> /dev/null && echo -e "${G}[✔] Installed\n"
 
-echo -e "\n${B}[+] Installing MPlayer & Kylin-video... "$W;
-sudo apt install kylin-video mplayer -y  1> /dev/null && echo -e "${G}[✔] Installed\n"
+# echo -e "\n${B}[+] Installing Flameshot..." $W;
+# sudo apt install flameshot -y 1> /dev/null && echo -e "${G}[✔] Installed\n"
+
+# echo -e "\n${B}[+] Installing MPlayer & Kylin-video... "$W;
+# sudo apt install kylin-video mplayer -y  1> /dev/null && echo -e "${G}[✔] Installed\n"
 
 echo -e "\n${B}[+] Installing Terminator... " $W;
 if [ -f /bin/terminator ]; then
